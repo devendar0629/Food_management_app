@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="root">
+
+        <header class="header-root">
+            <section class="header-intro">
+                <img src="https://img.freepik.com/premium-vector/dark-blue-vector-background-with-tasty-food_6869-2110.jpg" alt="Save-food">
+                <!-- <h1 class="header-title"> Food Reduction Website</h1> -->
+            </section>
+            <section class="navigation-menu">
+                <div class="menu-search">
+                    <div onclick="toggleState(this)" class="menu-icon">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <input class="search-box" type="search" name="" id="">
+                    <button class="search-btn">
+                        <img src="" alt="">
+                    </button>
+                </div>
+
+                <aside>
+                    <ul class="side-menu">
+                        <li>Lorem, ipsum.</li>
+                        <li>Recusandae, eos?</li>
+                        <li>Ad, natus.</li>
+                        <li>Iste, quia!</li>
+                    </ul>
+                </aside>
+
+                <nav>
+                    <ul class="navigation-tabs">
+                        <li>Lorem.</li>
+                        <li>Vitae.</li>
+                        <li>Labore?</li>
+                        <li>Dignissimos?</li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+    </div>
+    <script>
+        let sideMenu = document.getElementsByClassName('side-menu')[0]
+        function toggleState(element){
+            element.classList.toggle('menu-open');
+            sideMenu.classList.toggle('side-menu-open')
+        }
+    </script>
+</body>
+</html>
