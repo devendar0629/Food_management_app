@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /* TODO : Remove extra borders in navigation-tabs , side-menu */
-/* TODO : Add a search icon in search-button */
 
 * {
 	margin: 0;
@@ -19,7 +18,7 @@ html {
 	height: 100px;
 	background-repeat: no-repeat;
 	/* filter: blur(2px); */
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 	background-size: cover;
 	vertical-align: bottom;
 }
@@ -71,31 +70,52 @@ html {
 	flex-flow: column nowrap;
 }
 
+.search-wrapper{
+	display: flex;
+	width: min(90%,1100px);
+}
+
 .search-box {
 	height: 1.75rem;
-	width: 70%;
+	width: 100%;
 	font-family:'Open Sans',sans-serif;
 	padding-left: .7rem;
 	padding-top: .6rem;
 	padding-right: .4rem;
 	padding-bottom: .62rem;
-	margin-left: 8rem;
 	font-size: 1rem;
-	border: 1px solid gray;
+	outline-color: transparent;
+	/* border: 1px solid gray; */
+	border: none;
 	border-radius: 1.25rem;
 }
 
-.search-icon {
-    width: 25px;
-    height: 25px;
+.search-box:focus{
+	outline-color: rgb(26, 169, 226);
+}
 
+.search-btn{
+	border: none;
+	height: 1.65rem;
+	background: none;
+	width: 1.65rem;
+	transform: translate(-2rem,2px);
+	cursor: pointer;
+}
+
+.search-icon {
+	width: 1.3rem;
+	/* position: absolute; */
+	height: 1.3rem;
 }
 
 .menu-search {
 	display: flex;
+	gap: 2rem;
 	justify-content: space-between;
-	min-width: 100vw;
-	min-width: 100dvw;
+	margin: .74rem 0;
+	flex-wrap: nowrap;
+	min-width: 100%;
 }
 
 .navigation-menu {
@@ -107,6 +127,7 @@ html {
 	align-items: center;
 	background-color: aqua;
 }
+
 
 .navigation-tabs {
 	display: flex;
@@ -128,17 +149,19 @@ html {
 .side-menu {
 	background-color: #181818;
 	min-height: 100vh;
-	min-height: 100dvh;
 	top: 0px;
 	flex-flow: column nowrap;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border: none;
-    min-width: 32%;
+    min-width: 30dvw;
 	position: absolute; 
 	transform-origin: left;
-    left:-500px;
+	left:-30vw;
+	transition-property: left;
+	transition-duration: .3s;
+	transition-timing-function: ease;
 }
 
 .side-menu li {
@@ -166,5 +189,5 @@ html {
 }
 
 .side-menu-open {
-	left:0;
+	left:0vw;
 }
