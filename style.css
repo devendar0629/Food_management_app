@@ -13,8 +13,10 @@ html {
 	font-family: 'Open Sans', sans-serif;
 }
 
-body{
-	background-color: gray;
+.root{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 .header-intro img {
@@ -85,7 +87,7 @@ body{
 	font-family:'Open Sans',sans-serif;
 	padding-left: .7rem;
 	padding-top: .6rem;
-	padding-right: .4rem;
+	padding-right: 2.2rem;
 	padding-bottom: .62rem;
 	font-size: 1rem;
 	outline-color: transparent;
@@ -137,8 +139,8 @@ body{
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	min-width: 100vw;
-	min-width: 100dvw;
+	width: 100vw;
+	/* min-width: 100dvw; */
 }
 
 .navigation-tabs li {
@@ -199,10 +201,60 @@ body{
 .content-root{
 	display: flex;
 	flex-direction: column;
+	flex-wrap: nowrap;
+	padding-block: 1rem;
+	gap: 1rem;
+	align-items: start;
+	background-color: rgb(138, 78, 17);
 }
 
 .content{
+	flex-grow: 1;
+	gap: 1.5rem;
+	width: min(90vw,750px);
+	margin-inline: auto;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	padding: 15px;
+	border-radius: .55rem;
+	background-color: pink;
+}
 
+.hotel-image{
+	vertical-align: bottom;
+	height: min(20vw,200px);
+	border-radius: .35rem;
+	width: min(20vw,200px);
+}
+
+.food-available-no::after{
+	content: "❌";
+}
+
+.food-available-yes::after{
+	content: "✅";
+}
+
+.hotel-details{
+	display: flex;
+	padding: .8rem;
+	/* max-width: fit-content; */
+	background-color: rgb(162, 160, 160);
+	flex-grow: 1;
+	font-size: 1.85vh;
+	color: snow;
+	word-spacing: 4px;
+	border-radius: .55rem;
+	flex-direction: column;
+}
+
+.detail-name{
+	color: rgb(20, 115, 183);
+}
+
+.hotel-address{
+	font-style: oblique;
 }
 
 /* Mobile devices */
@@ -212,3 +264,9 @@ body{
 		width: 37.5vw;
 	}
 }
+
+/* @media screen and (width >= 1100px){
+	body{
+
+	}
+} */
