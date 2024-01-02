@@ -212,21 +212,3 @@ body{
 		width: 37.5vw;
 	}
 }
-
-/* Desktops, large screens
-
-@media screen and (1025px <= width <= 1200px){
-	
-}
-
-Small screens, laptops
-
-@media screen and (769px <= width <= 1024px) {
-	
-}
-
-Extra large screens, TV
-
-@media screen and (width >= 1201px) {
-	
-} */
