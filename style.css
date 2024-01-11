@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-/* TODO : Remove extra borders in navigation-tabs , side-menu */
-
 * {
 	margin: 0;
 	padding: 0;
@@ -34,6 +32,11 @@ html {
 	background: radial-gradient(blue,rgb(121, 121, 255));
 	width: 100%;
 	height: 100px;
+}
+
+.header-root {
+	top: 0;
+	position: sticky;
 }
 
 .header-title {
@@ -154,7 +157,7 @@ html {
 	align-items: center;
 	border: none;
 	width: min(365px,37vw);
-	position: absolute; 
+	position: fixed; 
 	transform-origin: left;
 	left: calc(min(365px,37vw)*(-2));
 	transition-property: left;
